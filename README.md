@@ -1,1 +1,1 @@
-My solutions
+Solutions by Devendra Lattu
