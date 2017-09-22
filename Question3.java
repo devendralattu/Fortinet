@@ -9,9 +9,9 @@ public class KSubgroupsSum {
 
 	public static void main(String[] args) {
 
-		List<Integer> list = new ArrayList<>(Arrays.asList(3, 1, 1, 2, 2, 1));
-		// Collections.shuffle(list);
-		int k = 2;
+		List<Integer> list = new ArrayList<>(Arrays.asList(4,9,-6,7,3,4));
+		Collections.shuffle(list);
+		int k = 3;
 
 		boolean result = separate(list, k);
 		if (result) {
@@ -22,13 +22,13 @@ public class KSubgroupsSum {
 	}
 
 	/*
-	 * Time Complexity: O(K * N * totalSum of list)
+	 * Time Complexity: exponential
 	 * Space Complexity: O(N)
 	 * Approach: Recursive Backtracking
 	 * 1. Each group from k groups should equal to totalSum / k 
 	 * 2. Recurse for each of the k groups until the value totalSum / k is met
 	 */
-	private static boolean separate(List<Integer> list, int k) {
+	public static boolean separate(List<Integer> list, int k) {
 
 		if (list == null || list.size() == 0) {
 			return false;
@@ -80,4 +80,5 @@ public class KSubgroupsSum {
 		}
 		return false;
 	}
+
 }
